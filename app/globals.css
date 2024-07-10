@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+    width: 100vw;
+    overflow-y: scroll !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.ball::after { background-color: #fff !important; }
+
+.balls::after, .ball::after {
+    content: "";
+    display: block;
+    width: calc(100% + 40px);
+    height: 1px; /* Adjust the height as needed */
+    background-color: #000; /* Color of the bar */
+    margin-top: 5px; /* Adjust the distance between text and bar */
+    transition: height 0.1s ease-in-out
+}
+
+.balls:hover::after, .ball:hover::after {
+    height: 5px;
+}
+
+button {
+    transition: all 0.1 ease-in-out;
+}
+
+.navbar {
+    z-index: 9999;
+}
+
+:root {
+    --button: #171a20;
+}
